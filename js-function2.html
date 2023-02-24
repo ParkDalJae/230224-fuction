@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <h1></h1>
+    <h2></h2>
+    <h3></h3>
+  </div>
+  <script>
+    let root = document.getElementById('root')
+    function percentCalculator(realValue, totalValue){
+      let result = (realValue/totalValue)*100;
+      return result + "%";
+    }
+    
+    console.log(percentCalculator(20,100));
+    root.children[0].innerHTML = percentCalculator(20,100);
+    root.children[1].innerHTML = percentCalculator(44, 36790);
+    root.children[2].innerHTML = percentCalculator(150, 75);
+  </script>
+</body>
+</html>

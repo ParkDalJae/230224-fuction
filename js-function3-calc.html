@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  <div id="root">
+    <textarea name="" id="num1" cols="10" rows="1">숫자1</textarea>
+    <textarea name="" id="num2" cols="10" rows="1">숫자2</textarea>
+    <button id="clk">계산</button>
+    <div>더하기
+      <h3></h3>
+    </div>
+    <div>빼기
+      <h3></h3>
+    </div>
+    <div>곱하기
+      <h3></h3>
+    </div>
+    <div>나누기
+      <h3></h3>
+    </div>
+  </div>
+  <script>
+    let root = document.getElementById('root')
+    let num1 = document.getElementById('num1').innerHTML
+    let num2 = document.getElementById('num2').innerHTML
+    
+    console.dir(num1)
+    console.dir(root.children[0])
+
+    function addCalculator(num1, num2){
+      let result = num1 + num2;
+      return result;
+    }
+    function subCalculator(num1, num2){
+      let result = num1 - num2;
+      return result;
+    }
+    function mulCalculator(num1, num2){
+      let result = num1 * num2;
+      return result;
+    }
+    function divCalculator(num1, num2){
+      let result = num1 / num2;
+      return result;
+    }
+    
+    console.log(root.children[0].children[0].innerHTML = addCalculator(1,10))
+    console.log(root.children[1].children[0].innerHTML = subCalculator(1,10))
+    console.log(root.children[2].children[0].innerHTML = mulCalculator(1,10))
+    console.log(root.children[3].children[0].innerHTML = divCalculator(1,10))
+
+  </script>
+</body>
+</html>
